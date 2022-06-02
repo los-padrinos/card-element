@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
+    <div class="card">
       <a href="#">
         <div class="img-wrapper">
           <img src="/img1.png" alt="">
@@ -21,7 +21,7 @@
         </div>
         <div class="details">
           <img src="/profile.png" alt="">
-          <div>
+          <div class="credentials">
             <h5>Twórca</h5>
             <p>data</p>
           </div>
@@ -29,4 +29,26 @@
       </a>
     </div>
   </body>
+
+  <style>
+    .card {
+      color: black;
+      cursor: pointer;
+      max-width: 50%;
+      min-width: 25%;
+      margin: 2em auto;
+      padding: 1em;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 25, .2) 1px 1px 5px;
+      
+      display: flex;
+      flex-direction: column;
+    }
+    .card a { color: inherit; text-decoration: none; }
+    .img-wrapper { height: 100%; flex-grow: 1; }
+    .textbox { margin: 2ch 0; flex-grow: 1; }
+    .details {display: grid; grid-template-columns: 1fr 5fr; gap: 2ch;}
+    .credentials h5 { margin: .5ch 0;}
+    .credentials p {color: rgba(0, 0, 25, .2); margin: .5ch 0;}
+  </style>
 </html>
